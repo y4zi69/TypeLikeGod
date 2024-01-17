@@ -14,15 +14,31 @@ body {
     min-height: 100vh;
     background-color: gray;
     color: black;
+    flex-direction: column;
+    
+}
+
+.header,.footer {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    
+}
+.footer {
+    align-items: end;
 }
 
 .wrapper {
     background-color: darkgray;
-    width: 800px;
+    width: 1000px;
     padding: 20px;
     border-radius: 15px;
 
 }
+
 
 .typing-text {
     font-size: 25px;
