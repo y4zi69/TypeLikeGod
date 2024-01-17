@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Josefin+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: gray;
+    color: black;
+}
+
+.wrapper {
+    background-color: darkgray;
+    width: 800px;
+    padding: 20px;
+    border-radius: 15px;
+
+}
+
+.typing-text {
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 30px;
+    word-break: break-all;
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.typing-text::-webkit-scrollbar {
+    width: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+.border-line {
+    margin-top: 5px;
+    border: none;
+    height: 1.3px;
+    background-color: black;
+    color: black;
+}
+
+.result-details {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 200px);
+    font-size: 20px;
+}
+
+.result-details li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.result-details li span {
+    margin-left: 10px;
+}
+
+.try-again {
+    padding: 15px;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    vertical-align: top;
+    text-align: top;
+}
+
+.try-again:hover {
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    background-color: white;
+    color: grey;
+    transition: color scale 1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.try-again:active {
+    transform: scale(.95);
+}
+
+.inp-field {
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+}
+span {
+    position: relative;
+}
+
+/* class added by js */
+
+.correct {
+    color: grey;
+    
+
+}
+
+.incorrect {
+    color: red;
+    
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: aliceblue;
+    opacity: 0;
+    animation: blink .5s ease-in-out infinite;
+
+}
+
+@keyframes blink {
+    50%{
+        opacity: 1;
+    }
+    
+}
