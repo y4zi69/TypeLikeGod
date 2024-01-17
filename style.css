@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: gray;
+    background-image: radial-gradient(white,rgb(75, 72, 72));
     color: black;
     flex-direction: column;
     
@@ -24,11 +24,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    row-gap: 30px;
-    
 }
+
 .footer {
-    align-items: end;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.social-media-icons {
+    display: flex;
+    column-gap: 30px;
 }
 
 .wrapper {
@@ -116,9 +121,16 @@ body {
     z-index: -1;
     opacity: 1;
 }
+
 span {
     position: relative;
 }
+
+.footer-icon {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* class added by js */
 

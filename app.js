@@ -15,20 +15,20 @@ isTyping = false;
 
 function randomParagraph (){
     const randomParagraph = randomParagraphs[Math.floor(Math.random() * randomParagraphs.length)];
-    typingText.innerHTML = ''
+    typingText.innerHTML = '';
     randomParagraph.split("").forEach(span => {
         let spantag = `<span>${span}</span>`;
         typingText.innerHTML += spantag;
     });
     document.addEventListener('keydown', () => {
         inpField.focus();
-    })
+    });
     typingText.addEventListener('click', () => {
         inpField.focus();
-    })
+    });
 }
 
-randomParagraph()
+randomParagraph();
 
 inpField.addEventListener("input", () =>{
     const character = typingText.querySelectorAll("span");
@@ -76,7 +76,6 @@ inpField.addEventListener("input", () =>{
 
 
 tryAgainBtn.addEventListener('click', () => {
-    alert('button clicked')
     inpField.value = ''
     clearInterval(timer)
     randomParagraph()
