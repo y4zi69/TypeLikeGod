@@ -76,14 +76,14 @@ inpField.addEventListener("input", () =>{
 
 
 tryAgainBtn.addEventListener('click', () => {
-    inpField.value = ''
-    clearInterval(timer)
-    randomParagraph()
-    mistakes = 0;
+    inpField.value = '';
+    clearInterval(timer);
+    randomParagraph();
+    mistakes = 0;;
     characterIndex = 0;
     timeLeft = maxTime;
     isTyping = false;
-    time.textContent = 60
+    time.textContent = 60;
     mistakeCount.textContent = 0;
     cpm.textContent = 0;
     wpmtag.textContent = 0;
